@@ -46,7 +46,7 @@ app.post('/webhook', function(req, res) {
     var _token = req.body.token;
 
     if (_token !==  CONF_TOKEN) {
-        // console.log('Erreur Token');
+        console.log('Erreur Token');
         return res.status(404).json({ message: 'Invalid Token' }).end();
     }
 
