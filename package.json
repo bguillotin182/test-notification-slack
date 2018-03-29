@@ -1,0 +1,37 @@
+{
+  "name": "test-webhook",
+  "version": "1.0.0",
+  "description": "This is the project initialization for test-notification-slack",
+  "main": "main.js",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "habitat": "^3.1.2",
+    "lodash": "^4.17.5",
+    "moment": "^2.21.0",
+    "q": "^1.5.1",
+    "slack-node": "^0.1.8",
+    "slack-webhook": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bguillotin182/test-notification-slack.git"
+  },
+  "keywords": [
+    "node",
+    "slack",
+    "notification",
+    "server"
+  ],
+  "author": "Benoit GUILLOTIN",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bguillotin182/test-notification-slack/issues"
+  },
+  "homepage": "https://github.com/bguillotin182/test-notification-slack#readme"
+}
