@@ -15,6 +15,7 @@ var app_env = require('./app_envparser.js');
 var conf_app = app_env.all();
 // Get webhookUri from environnement file (./.env).
 const CONF_WEBHOOKURI = conf_app.webhookuri;
+const CONF_HOST = conf_app.host;
 const CONF_PORT = conf_app.port;
 const CONF_TOKEN = conf_app.token;
 const CONF_SLACK_TOKEN = conf_app.slacktoken;
@@ -131,6 +132,10 @@ app.get('/test', function(req, res) {
     res.status(200).json({ response: 'Server is running !!' }).end();
 });
 
+app.get('/', function(req, res) {
+    res.status(200).json({ response: 'ROOT Server is running !!' }).end();
+});
+
 app.post('/finduser', function(req, res) {
     if (!slackUserCatalog) {
         getUserList().then(function(response) {
@@ -148,6 +153,6 @@ app.get('/getuserlist', function(req, res) {
     });
 });
 
-var server = app.listen(CONF_PORT, function() {
-    console.log(':: App running for slack notification hook :: localhost:', server.address().port);
+var server = app.listen(CONF_PORT, CONF_HOST, () => {
+    console.log(`:: App running for slack notification hook :: ${server.address().address}:${server.address().port}`);
 });
