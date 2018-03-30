@@ -11,7 +11,6 @@
 
 
 ## General Help :
-Here is a POSTMAN collection to help you to test the `nodeJS` server : https://www.getpostman.com/collections/dc661de8ae74d0b04ad5
 - [link to Slack Node package!](https://www.npmjs.com/package/slack-node)
 - [link to my Slack incoming webhook uri!](https://my.slack.com/services/new/incoming-webhook)
 - [link to Slack Legacy Token](https://api.slack.com/custom-integrations/legacy-tokens)

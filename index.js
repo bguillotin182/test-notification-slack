@@ -132,10 +132,6 @@ app.get('/test', function(req, res) {
     res.status(200).json({ response: 'Server is running !!' }).end();
 });
 
-app.get('/', function(req, res) {
-    res.status(200).json({ response: 'ROOT Server is running !!' }).end();
-});
-
 app.post('/finduser', function(req, res) {
     if (!slackUserCatalog) {
         getUserList().then(function(response) {
